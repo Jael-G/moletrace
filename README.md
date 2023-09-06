@@ -70,14 +70,14 @@ Shows a table containing all the information of captured targets
 
 - #### PAYLOADS GENERATOR
 
-Generetate payloads in the selected language to be executed in target systems
+Generate payloads in the selected language to be executed in target systems
 (Only Python and Shell for now)
 
 <img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/payloads_page_example.png" alt="Picture of Payloads Page">
 
 - #### LOCATIONS MAP
 
-Interactive map that allows to see where the locations precisely are. The cordinates in the 
-maks pop-up have a hyperlink to the Google Maps page. 
+Interactive map that allows to see where the locations precisely are. The coordinates in the 
+marks pop-up have a hyperlink to the Google Maps page. 
 
 <img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/location_page_example.png" alt="Picture of Payloads Page">
