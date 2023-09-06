@@ -57,13 +57,13 @@ The GUI is ran on a flask server and allows easy control and usage of all the fe
 When loaded the server will show the landing page. The GUI consists of three main tabs,
 all accessed using a top panel for easy changing of the pages. 
 
-<img src="https://raw.githubusercontent.com/JAEL-G/MoleTrace/blob/master/examples/landing_example.png" alt="Picture of Landing Page">
+<img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/landing_example.png" alt="Picture of Landing Page">
 
 - TARGETS
 
 Shows a table containing all the information of captured targets
 
-<img src="https://raw.githubusercontent.com/JAEL-G/MoleTrace/blob/master/examples/targets_page_example.png" alt="Picture of Targets Page">
+<img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/targets_page_example.png" alt="Picture of Targets Page">
 
 
 - PAYLOADS GENERATOR
@@ -71,11 +71,11 @@ Shows a table containing all the information of captured targets
 Generetate payloads in the selected language to be executed in target systems
 (Only Python and Shell for now)
 
-<img src="https://raw.githubusercontent.com/JAEL-G/MoleTrace/blob/master/examples/payloads_page_example.png" alt="Picture of Payloads Page">
+<img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/payloads_page_example.png" alt="Picture of Payloads Page">
 
 - LOCATIONS MAP
 
 Interactive map that allows to see where the locations precisely are. The cordinates in the 
 maks pop-up have a hyperlink to the Google Maps page. 
 
-<img src="https://raw.githubusercontent.com/JAEL-G/MoleTrace/blob/master/examples/location_page_example.png" alt="Picture of Payloads Page">">
+<img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/location_page_example.png" alt="Picture of Payloads Page">">
