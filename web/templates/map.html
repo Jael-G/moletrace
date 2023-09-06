@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block content %}
+<div id="map"></div>
+<script>
+    var map = L.map('map', {
+        center: [37.0902, -95.7129],
+        zoom: 5,
+        minZoom: 3 
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    {% for name, lat, lng in locations %}
+    L.marker([{{ lat }}, {{ lng }}]).addTo(map)
+        .bindPopup("{{ name }}<br><div style='text-align:center;'><a href='https://www.google.com/maps?q={{ lat }},{{ lng }}' target='_blank'>{{ lat }}, {{ lng }}</a></div>");
+    {% endfor %}
+</script>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+  <h1 id="paylod-title">Payload Generator</h1>
+  <div>
+    <div class="form-group">
+      <label for="lhost">LHOST:</label>
+      <br>
+      <input type="text" class="payload-form-control" id="lhost" placeholder="Default 127.0.0.1">
+    </div>
+    <div class="form-group">
+      <label for="lport">LPORT:</label>
+      <br>
+      <input type="text" class="payload-form-control" id="lport" placeholder="Default 5000">
+    </div>
+    <div class="button-group">
+      <button class="payload-button" role="button" onclick="generatePayload('Python')">Python</button>
+      <button class="payload-button" role="button" disabled style="opacity: 0.5;">CMD</button>
+      <button class="payload-button" role="button" disabled style="opacity: 0.5;">Powershell</button>
+      <button class="payload-button" role="button" onclick="generatePayload('Shell')">Shell</button>
+    </div>
+    <div id="output" style="display: none;">
+      <h2>Generated Payload:</h2>
+      <textarea id="payload-text"></textarea>
+    </div>
+  </div>
+</div>
+
+<script>
+  function generatePayload(buttonText) {
+    var lhostValue = document.getElementById('lhost').value;
+    if (lhostValue == '') {
+      lhostValue = "127.0.0.1"
+    }
+    var lportValue = document.getElementById('lport').value;
+    if (lportValue == '') {
+      lportValue = "5000"
+    }
+
+    var payloadData = {
+      language: buttonText,
+      lhost: lhostValue,
+      lport: lportValue
+    };
+
+    fetch(`/payloads/templates`, {
+      method: 'POST',
+      body: JSON.stringify(payloadData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.text())
+      .then(responseText => {
+        var payloadTextArea = document.getElementById('payload-text');
+        payloadTextArea.value = responseText;
+        payloadTextArea.rows = responseText.split('\n').length;
+
+        document.getElementById('output').style.display = 'block';
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% block content %}
+<style>
+  .centered-container {
+    text-align: center;
+    margin: 0 auto;
+  }
+</style>
+
+<script>
+
+  window.addEventListener("load", function () {
+    const imageContainer = document.querySelector(".image-container");
+    const title = document.querySelector(".title");
+
+
+    imageContainer.style.opacity = "0";
+    imageContainer.style.transform = "scale(0)";
+    title.style.opacity = "0";
+
+    setTimeout(function () {
+      imageContainer.style.transition = "opacity 1s, transform 1s";
+      imageContainer.style.opacity = "1";
+      imageContainer.style.transform = "scale(1)";
+
+
+      setTimeout(function () {
+        title.style.transition = "opacity 1s";
+        title.style.opacity = "1";
+
+
+        setTimeout(function () {
+
+          imageContainer.style.opacity = "0";
+          imageContainer.style.transform = "scale(0)";
+          title.style.opacity = "0";
+
+          setTimeout(function () {
+
+            window.location.href = "/targets";
+          }, 1000); 
+        }, 2000); 
+      }, 1000); 
+    }, 100); 
+  });
+</script>
+
+<div class="centered-container">
+  <div class="image-container">
+    <img src="{{ url_for('static', filename='img/moletrace_logo.png') }}" alt="Moletrace Logo" height="300px" width="300px">
+    <div class="title">
+      <h1 style="font-size: 100px; margin-left: 20px;">MoleTrace</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}

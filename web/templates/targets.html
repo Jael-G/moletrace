@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+
+<h1 class="targets-title">Targets Page</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>IP</th>
+    <th>MAC</th>
+    <th>LAT</th>
+    <th>LNG</th>
+    <th>DEVICE</th>
+  </tr>
+  {% for target in targets %}
+  <tr>
+    <td>{{ target[0] }}</td>
+    <td>{{ target[1] }}</td>
+    <td>{{ target[2] }}</td>
+    <td>{{ target[3] }}</td>
+    <td>{{ target[4] }}</td>
+    <td>{{ target[5] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
