@@ -1,7 +1,7 @@
-<div style="display: flex; align-items: center;">
-  <img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/web/static/img/moletrace_logo.png" alt="MoleTrace-logo" width="175" height="175">
-  <h1 style="font-size: 75px; margin-left: 20px;">MoleTrace</h1>
-</div>
+
+<img src="https://raw.githubusercontent.com/Jael-G/moletrace/master/examples/moletrace_banner.png" alt="MoleTrace-banner">
+<h1 style="font-size: 75px; margin-left: 20px;">MoleTrace</h1>
+
 MoleTrace is a Python-based cybersecurity application designed for precise location retrieval using Google's geolocation API. It empowers post-access reconnaissance with a comprehensive set of features:
 
 ## Features
